@@ -1,0 +1,83 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2D325D;
+}
+
+
+#container{
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    --dot-size: 5px
+}
+
+.drag-container{
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: center;     
+    align-items: center;
+    width: 15px;
+    height: 15px;
+}
+
+.drag{
+    user-select: none;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+
+    height: var(--dot-size);
+    width: var(--dot-size);
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128);
+}
+
+
+.drag::before{
+    content: '';
+    display: inline-block;
+    -webkit-app-region: drag;
+
+    position: absolute;
+    height: var(--dot-size);
+    width: var(--dot-size);
+    transform: translateY(-5px);
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128);
+}
+
+.drag::after{
+    content: '';
+    display: inline-block;
+    -webkit-app-region: drag;
+
+    position: absolute;
+    height: var(--dot-size);
+    width: var(--dot-size);
+    transform: translateY(5px);
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128);
+}
+
+
+
+#stopwatch{
+    color: white;
+    user-select: none;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+
+#stopwatch.true{
+    border-bottom:  3px solid green;
+}
+
+#stopwatch.false{
+    border-bottom:  3px solid red;
+}
