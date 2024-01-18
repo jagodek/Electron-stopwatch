@@ -3,9 +3,11 @@ const {app, BrowserWindow} = require("electron")
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 100,
-        heiht: 30,
-        maxHeight: 30,
+        heiht: 40,
+        maxHeight: 40,
         maxWidth: 100,
+        minHeight: 40,
+        minWidth: 100,
         titleBarStyle: 'hidden',
         icon: __dirname + '/buildResources/icon.png',
     })
