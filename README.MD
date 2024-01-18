@@ -20,5 +20,4 @@ I'm aware that there is a way of publishing this as casual installable app but i
 
 ## Issues
 1. For some reason app is started in undesirable size. It's too tall and only by first drag it changes to intended size.
-2. When app is resized on top edge it moves down until it's gone beyond the screen
-3. When app is pinned to windows taskbar the clock icon is change to default Electorn logo
+2. When app is pinned to windows taskbar the clock icon is change to default Electorn logo
